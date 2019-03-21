@@ -1,7 +1,7 @@
 package com.niaobulashi.service;
 
-import com.neo.model.UserDetail;
-import com.neo.param.UserDetailParam;
+import com.niaobulashi.model.UserDetail;
+import com.niaobulashi.param.UserDetailParam;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

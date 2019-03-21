@@ -1,9 +1,9 @@
 package com.niaobulashi.service;
 
 import com.mysql.cj.util.StringUtils;
-import com.neo.model.UserDetail;
-import com.neo.param.UserDetailParam;
-import com.neo.repository.UserDetailRepository;
+import com.niaobulashi.model.UserDetail;
+import com.niaobulashi.param.UserDetailParam;
+import com.niaobulashi.repository.UserDetailRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -45,4 +45,5 @@ public class UserDetailServiceImpl implements  UserDetailService{
         }, pageable);
 
     }
+
 }
