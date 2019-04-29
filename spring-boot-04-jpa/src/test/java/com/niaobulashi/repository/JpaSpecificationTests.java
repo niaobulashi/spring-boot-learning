@@ -1,8 +1,8 @@
-package com.neo.repository;
+package com.niaobulashi.repository;
 
-import com.neo.model.UserDetail;
-import com.neo.param.UserDetailParam;
-import com.neo.service.UserDetailService;
+import com.niaobulashi.model.UserDetail;
+import com.niaobulashi.param.UserDetailParam;
+import com.niaobulashi.service.UserDetailService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
