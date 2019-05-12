@@ -17,6 +17,7 @@ public class UserController {
 
     /**
      * 查询所有用户
+     *
      * @return
      */
     @RequestMapping("/getUsers")
@@ -27,6 +28,7 @@ public class UserController {
 
     /**
      * 根据id查询用户
+     *
      * @param id
      * @return
      */
@@ -41,12 +43,12 @@ public class UserController {
         userMapper.insert(user);
     }
 
-    @RequestMapping(value="update")
+    @RequestMapping(value = "update")
     public void update(User user) {
         userMapper.update(user);
     }
 
-    @RequestMapping(value="/delete/{id}")
+    @RequestMapping(value = "/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
         userMapper.delete(id);
     }
