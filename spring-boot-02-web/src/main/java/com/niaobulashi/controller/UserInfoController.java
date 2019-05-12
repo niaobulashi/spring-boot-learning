@@ -24,14 +24,14 @@ public class UserInfoController {
 
     @RequestMapping("/getUserAA")
     public UserVo getUserAA() {
-        UserVo user=userRepository.findByUserName("aa");
+        UserVo user = userRepository.findByUserName("aa");
         System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");
         return user;
     }
 
     @RequestMapping("/getUsers")
     public List<UserVo> getUsers() {
-        List<UserVo> users=userRepository.findAll();
+        List<UserVo> users = userRepository.findAll();
         System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");
         return users;
     }

@@ -17,7 +17,7 @@ public class WebConfiguration {
     }
 
     @Bean
-    public FilterRegistrationBean testFilterRegistration () {
+    public FilterRegistrationBean testFilterRegistration() {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(new MyFilter());
         registration.addUrlPatterns("/*");
@@ -36,7 +36,7 @@ public class WebConfiguration {
         @Override
         public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
             HttpServletRequest request = (HttpServletRequest) servletRequest;
-            System.out.println("this is MyFilter,url :"+request.getRequestURI());
+            System.out.println("this is MyFilter,url :" + request.getRequestURI());
             filterChain.doFilter(servletRequest, servletResponse);
         }
 
