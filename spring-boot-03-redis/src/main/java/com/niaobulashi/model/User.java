@@ -5,83 +5,84 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	private Long id;
-	private String userName;
-	private String password;
-	private String email;
-	private String nickname;
-	private String regTime;
+    private static final long serialVersionUID = 1L;
+    private Long id;
+    private String userName;
+    private String password;
+    private String email;
+    private String nickname;
+    private String regTime;
 
-	public User() {
-		super();
-	}
-	public User(String email, String nickname, String password, String userName, String regTime) {
-		super();
-		this.email = email;
-		this.nickname = nickname;
-		this.password = password;
-		this.userName = userName;
-		this.regTime = regTime;
-	}
+    public User() {
+        super();
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public User(String email, String nickname, String password, String userName, String regTime) {
+        super();
+        this.email = email;
+        this.nickname = nickname;
+        this.password = password;
+        this.userName = userName;
+        this.regTime = regTime;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getNickname() {
-		return nickname;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
-	}
+    public String getNickname() {
+        return nickname;
+    }
 
-	public String getRegTime() {
-		return regTime;
-	}
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
 
-	public void setRegTime(String regTime) {
-		this.regTime = regTime;
-	}
+    public String getRegTime() {
+        return regTime;
+    }
 
-	@Override
-	public String toString() {
-		return "User{" +
-				"id=" + id +
-				", userName='" + userName + '\'' +
-				", password='" + password + '\'' +
-				", email='" + email + '\'' +
-				", nickname='" + nickname + '\'' +
-				", regTime='" + regTime + '\'' +
-				'}';
-	}
+    public void setRegTime(String regTime) {
+        this.regTime = regTime;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", regTime='" + regTime + '\'' +
+                '}';
+    }
 }
