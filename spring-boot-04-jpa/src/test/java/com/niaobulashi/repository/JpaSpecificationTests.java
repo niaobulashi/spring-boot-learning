@@ -18,22 +18,22 @@ import javax.annotation.Resource;
 @SpringBootTest
 public class JpaSpecificationTests {
 
-	@Resource
-	private UserDetailService userDetailService;
+    @Resource
+    private UserDetailService userDetailService;
 
-	@Test
-	public void testFindByCondition()  {
-		int page=0,size=10;
-		Sort sort = new Sort(Sort.Direction.DESC, "id");
-		Pageable pageable = PageRequest.of(page, size, sort);
-		UserDetailParam param=new UserDetailParam();
-		param.setIntroduction("程序员");
-		param.setMinAge(10);
-		param.setMaxAge(30);
-		Page<UserDetail> page1=userDetailService.findByCondition(param,pageable);
-		for (UserDetail userDetail:page1){
-			System.out.println("userDetail: "+userDetail.toString());
-		}
-	}
+    @Test
+    public void testFindByCondition() {
+        int page = 0, size = 10;
+        Sort sort = new Sort(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(page, size, sort);
+        UserDetailParam param = new UserDetailParam();
+        param.setIntroduction("程序员");
+        param.setMinAge(10);
+        param.setMaxAge(30);
+        Page<UserDetail> page1 = userDetailService.findByCondition(param, pageable);
+        for (UserDetail userDetail : page1) {
+            System.out.println("userDetail: " + userDetail.toString());
+        }
+    }
 
 }

@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 
-public interface UserDetailRepository extends JpaSpecificationExecutor<UserDetail>,JpaRepository<UserDetail, Long>  {
+public interface UserDetailRepository extends JpaSpecificationExecutor<UserDetail>, JpaRepository<UserDetail, Long> {
 
     UserDetail findByHobby(String hobby);
 
