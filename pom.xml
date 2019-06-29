@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.dalaoyang</groupId>
+    <artifactId>springboot_learn</artifactId>
+    <version>2.0</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>spring-boot-01-helloworld</module>
+        <module>spring-boot-02-web</module>
+        <module>spring-boot-03-redis</module>
+        <module>spring-boot-04-jpa</module>
+        <module>spring-boot-04-jpa-multi</module>
+        <module>spring-boot-05-mybatis</module>
+        <module>spring-boot-06-rabbitmq</module>
+        <module>spring-boot-06-thymeleaf</module>
+        <module>spring-boot-07-scheduler</module>
+        <module>spring-boot-08-mail</module>
+        <module>spring-boot-09-shiro</module>
+        <module>spring-boot-10-mybatis-hello</module>
+        <module>spring-boot-11-mybatis-cache</module>
+    </modules>
+</project>
