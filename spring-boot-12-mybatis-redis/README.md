@@ -23,4 +23,4 @@ github博客：[鸟不拉屎](https://niaobulashi.github.io)
 
 一个正在努力Coding的未来架构师
 
-![鸟不拉屎](https://niaobulashi.github.io/assets/images/wechat-niaobulashi.jpg)
+![](https://user-gold-cdn.xitu.io/2019/6/30/16ba8b651769067e?w=258&h=258&f=jpeg&s=28925)
