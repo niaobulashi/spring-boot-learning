@@ -18,18 +18,29 @@ import java.util.concurrent.TimeUnit;
 public class RedisUtils {
     @Autowired
     private RedisTemplate redisTemplate;
+    // 简单的K-V操作
     @Resource(name="redisTemplate")
     private ValueOperations<String, String> valueOperations;
+
+    // 针对Map类型的数据操作
     @Resource(name="redisTemplate")
     private HashOperations<String, String, Object> hashOperations;
+
+    // 针对List类型的数据操作
     @Resource(name="redisTemplate")
     private ListOperations<String, Object> listOperations;
+
+    // set类型数据操作
     @Resource(name="redisTemplate")
     private SetOperations<String, Object> setOperations;
+
+    // zset类型数据操作
     @Resource(name="redisTemplate")
     private ZSetOperations<String, Object> zSetOperations;
+
     /**  默认过期时长，单位：秒 */
     public final static long DEFAULT_EXPIRE = 60 * 60 * 24;
+
     /**  不设置过期时长 */
     public final static long NOT_EXPIRE = -1;
 
@@ -74,6 +85,7 @@ public class RedisUtils {
             redisTemplate.expire(key, expire, TimeUnit.SECONDS);
         }
     }
+
 
     /**
      * Object转成JSON
