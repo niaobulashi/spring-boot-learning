@@ -29,7 +29,7 @@ public class SysCodeController {
         Long startTime = System.currentTimeMillis(); //开始时间
         List<SysCodeEntity> codeList = sysCodeService.queryCodeAll();
         Long endTime = System.currentTimeMillis(); //结束时间
-        System.out.println("查询数据库--共耗时：" + (endTime - startTime) + "毫秒"); //1007毫秒
+        System.out.println("共耗时：" + (endTime - startTime) + "毫秒"); //1007毫秒
         return codeList;
     }
 }
