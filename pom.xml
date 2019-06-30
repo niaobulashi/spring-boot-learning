@@ -19,5 +19,6 @@
         <module>spring-boot-10-mybatis-hello</module>
         <module>spring-boot-11-mybatis-cache</module>
         <module>spring-boot-12-mybatis-redis</module>
+        <module>spring-boot-13-multi-mybatis</module>
     </modules>
 </project>
