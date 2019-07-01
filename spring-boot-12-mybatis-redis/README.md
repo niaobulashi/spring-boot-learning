@@ -1,7 +1,5 @@
 # Spring Boot2(三)：使用Spring Boot2集成Redis缓存
 
-文章地址（个人博客）：https://niaobulashi.com/archives/spring-boot-redis.html
-
 文章地址（github博客）：https://niaobulashi.github.io/springboot/2019/06/30/spring-boot-redis.html
 
 ---
