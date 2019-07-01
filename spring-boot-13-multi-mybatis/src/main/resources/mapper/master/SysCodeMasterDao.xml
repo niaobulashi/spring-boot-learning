@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.niaobulashi.mapper.master.SysUserMasterDao">
+
+    <!--查询所有用户信息-->
+    <select id="queryUserAll" resultType="com.niaobulashi.entity.SysUserEntity">
+        SELECT
+            ur.*
+        FROM
+            sys_user ur
+        WHERE
+            1 = 1
+    </select>
+
+    <!--根据用户userId查询用户信息-->
+    <select id="queryUserInfo" resultType="com.niaobulashi.entity.SysUserEntity">
+        SELECT
+            ur.*
+        FROM
+            sys_user ur
+        WHERE
+            1 = 1
+          AND ur.user_id = #{userId}
+    </select>
+
+    <!-- 根据UserId，更新邮箱和手机号 -->
+    <update id="updateUserInfo" parameterType="com.niaobulashi.entity.SysUserEntity">
+        UPDATE sys_user u
+        <set>
+            <if test="email != null">
+                u.email = #{email},
+            </if>
+            <if test="mobile != null">
+                u.mobile = #{mobile},
+            </if>
+        </set>
+        WHERE
+        u.user_id = #{userId}
+    </update>
+
+</mapper>

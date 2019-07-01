@@ -1,0 +1,16 @@
+#指定配置文件为test
+spring:
+  profiles:
+    active: test
+
+#配置Mybatis
+mybatis:
+  configuration:
+    # 开启驼峰命名转换，如：Table(create_time) -> Entity(createTime)。不需要我们关心怎么进行字段匹配，mybatis会自动识别`大写字母与下划线`
+    map-underscore-to-camel-case: true
+
+#打印SQL日志
+logging:
+  level:
+    com.niaobulashi.mapper.*: DEBUG
+
