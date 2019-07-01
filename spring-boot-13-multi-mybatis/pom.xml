@@ -11,7 +11,7 @@
     <groupId>com.niaobulashi</groupId>
     <artifactId>spring-boot-13-multi-mybatis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>multi</name>
+    <name>spring-boot-13-multi-mybatis</name>
     <description>Spring Boot多数据源读写分离</description>
 
     <properties>

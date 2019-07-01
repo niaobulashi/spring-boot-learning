@@ -34,7 +34,6 @@ public class DataSourceSlaveConfig {
         return DataSourceBuilder.create().build();
     }
 
-
     /**
      * 将配置信息注入到SqlSessionFactoryBean中
      * @param dataSource    数据库连接信息
@@ -42,10 +41,13 @@ public class DataSourceSlaveConfig {
      * @throws Exception
      */
     @Bean(name = "slaveSqlSessionFactory")
-    public SqlSessionFactory slaveSqlSessionFactory(@Qualifier("slaveDataSource") DataSource dataSource, org.apache.ibatis.session.Configuration config) throws Exception {
+    public SqlSessionFactory slaveSqlSessionFactory(@Qualifier("slaveDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+        // 使配置信息加载到类中，再注入到SqlSessionFactoryBean
+        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
+        configuration.setMapUnderscoreToCamelCase(true);
+        bean.setConfiguration(configuration);
         bean.setDataSource(dataSource);
-        bean.setConfiguration(config);
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/slave/*.xml"));
         return bean.getObject();
     }

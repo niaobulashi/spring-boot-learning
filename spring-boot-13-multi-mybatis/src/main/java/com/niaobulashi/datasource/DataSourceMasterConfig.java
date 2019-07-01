@@ -39,16 +39,18 @@ public class DataSourceMasterConfig {
     /**
      * 将配置信息注入到SqlSessionFactoryBean中
      * @param dataSource    数据库连接信息
-     * @param config    数据库配置信息
      * @return
      * @throws Exception
      */
     @Bean(name = "masterSqlSessionFactory")
     @Primary
-    public SqlSessionFactory masterSqlSessionFactory(@Qualifier("masterDataSource") DataSource dataSource, org.apache.ibatis.session.Configuration config) throws Exception {
+    public SqlSessionFactory masterSqlSessionFactory(@Qualifier("masterDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
+        // 使配置信息加载到类中，再注入到SqlSessionFactoryBean
+        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
+        configuration.setMapUnderscoreToCamelCase(true);
+        bean.setConfiguration(configuration);
         bean.setDataSource(dataSource);
-        bean.setConfiguration(config);
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/master/*.xml"));
         return bean.getObject();
     }
