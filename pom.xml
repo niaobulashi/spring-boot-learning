@@ -12,7 +12,6 @@
         <module>spring-boot-04-jpa-multi</module>
         <module>spring-boot-05-mybatis</module>
         <module>spring-boot-06-rabbitmq</module>
-        <module>spring-boot-06-thymeleaf</module>
         <module>spring-boot-07-scheduler</module>
         <module>spring-boot-08-mail</module>
         <module>spring-boot-09-shiro</module>
@@ -20,5 +19,6 @@
         <module>spring-boot-11-mybatis-cache</module>
         <module>spring-boot-12-mybatis-redis</module>
         <module>spring-boot-13-multi-mybatis</module>
+        <module>spring-boot-14-thymeleaf</module>
     </modules>
 </project>

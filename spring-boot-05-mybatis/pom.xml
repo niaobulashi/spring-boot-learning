@@ -11,10 +11,12 @@
     <groupId>com.niaobulashi</groupId>
     <artifactId>spring-boot-05-mybatis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mybatisApplication</name>
+    <name>spring-boot-05-mybatis</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>12</java.version>
     </properties>
 
