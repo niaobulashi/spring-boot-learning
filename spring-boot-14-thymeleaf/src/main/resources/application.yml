@@ -1,0 +1,24 @@
+server:
+  port: 8081
+spring:
+  thymeleaf:
+    # 是否启用
+    enabled: true
+    # 模板编码
+    encoding: UTF-8
+    # 模板模式
+    mode: HTML5
+    # 模板存放路径
+    prefix: classpath:/templates/
+    # 模板后缀
+    suffix: .html
+    # 启用缓存，建议生产开启
+    cache: false
+    # 校验模板是否存在
+    check-template-location: true
+    # Content-type值
+    servlet:
+      content-type: text/html
+  # 加配置静态资源
+  resources:
+    static-locations: classpath:/

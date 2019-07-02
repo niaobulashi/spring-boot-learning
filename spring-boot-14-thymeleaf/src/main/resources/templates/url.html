@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Example If/Unless </title>
+</head>
+<body>
+<div>
+    <h1>URL</h1>
+    <a th:href="@{https://niaobulashi.com/{type}(type=${type})}">link1</a>
+    <br/>
+    <a th:href="@{https://niaobulashi.com/{pageId}/can-use-springcloud.html(pageId=${pageId})}">view</a>
+    <br/>
+    <div th:style="'background:url(' + @{${img}} + ');'">
+        <br/><br/><br/>
+    </div>
+</div>
+</body>
+</html>

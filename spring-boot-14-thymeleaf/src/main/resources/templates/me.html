@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html;charset=UTF-8"/>
+    <title>鸟不拉屎</title>
+    <link rel="stylesheet" href="static/layui/css/layui.css">
+</head>
+<body>
+<div class="layui-container">
+    <h1>templates示例</h1>
+    <!-- th:text="" 将h2的文本值视为指定参数 -->
+    <hr>
+    <h2 th:text="${msg}">这是h2</h2>
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>循环</legend>
+    </fieldset>
+    <table style="text-align: center" class="layui-table" lay-skin="line"  >
+        <colgroup>
+            <col width="350">
+        </colgroup>
+        <thead>
+        <tr>
+            <th>NAME</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- th循环遍历传来的参数 -->
+        <tr th:each="str : ${lists}" >
+            <th th:text="${str}" ></th>
+        </tr>
+        </tbody>
+    </table>
+    <img th:src="${images}" >
+</div>
+</body>
+</html>
