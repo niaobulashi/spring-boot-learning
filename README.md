@@ -7,14 +7,6 @@
 
 个人网站：https://niaobulashi.com
 
-github博客：https://niaobulashi.github.io
-
-博客园 ：http://www.cnblogs.com/niaobulashi
-
-掘金 ：https://juejin.im/user/5b3de9155188251aa0161fe4
-
-CSDN ：https://blog.csdn.net/u013299671
-
 公众号：鸟不拉屎
 
 一个正在努力Coding的未来架构师
