@@ -20,5 +20,6 @@
         <module>spring-boot-12-mybatis-redis</module>
         <module>spring-boot-13-multi-mybatis</module>
         <module>spring-boot-14-thymeleaf</module>
+        <module>spring-boot-15-aop-log</module>
     </modules>
 </project>
