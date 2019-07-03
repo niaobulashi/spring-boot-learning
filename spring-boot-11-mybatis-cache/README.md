@@ -1,6 +1,6 @@
 # Spring Boot2 集成 Mybatis 缓存实例
 
-文章地址（github博客）：https://niaobulashi.github.io/springboot/2019/06/28/mybatis-2levelcache.html
+文章地址：https://niaobulashi.com/archives/mybatis-2levelcache.html
 
 鸟不拉屎：一个正在努力Coding的未来架构师
 
