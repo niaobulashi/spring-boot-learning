@@ -1,6 +1,5 @@
 package com.niaobulashi.aspect;
 
-import com.google.gson.Gson;
 import com.niaobulashi.anno.SysLog;
 import com.niaobulashi.entity.SysLogEntity;
 import com.niaobulashi.service.SysLogService;
@@ -66,6 +65,7 @@ public class SysLogAspect {
      */
     private void saveLog(ProceedingJoinPoint joinPoint, long time) {
 
+        // 获取方法的关键信息，类，包
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         SysLogEntity sysLogEntity = new SysLogEntity();
@@ -87,7 +87,7 @@ public class SysLogAspect {
         try {
             List<String> list = new ArrayList<String>();
             for (Object o : args) {
-                list.add(new Gson().toJson(o));
+                list.add(o.toString());
             }
             sysLogEntity.setParams(list.toString());
         } catch (Exception e){

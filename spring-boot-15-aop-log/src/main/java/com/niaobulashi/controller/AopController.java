@@ -15,7 +15,7 @@ public class AopController {
 
     @SysLog("测试")
     @GetMapping("/test")
-    public String test(@RequestParam("name") String name){
-        return name;
+    public String test(@RequestParam("name") String name, @RequestParam("age") int age){
+        return name + ", " + age;
     }
 }
