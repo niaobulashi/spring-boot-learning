@@ -22,5 +22,6 @@
         <module>spring-boot-14-thymeleaf</module>
         <module>spring-boot-15-aop-log</module>
         <module>spring-boot-16-filter</module>
+        <module>spring-boot-17-interceptor</module>
     </modules>
 </project>

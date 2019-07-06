@@ -36,6 +36,9 @@ public class WebConfig {
         return registration;
     }
 
+    /**
+     * 定义过滤器
+     */
     public class MyFilter implements Filter {
         @Override
         public void init(FilterConfig filterConfig) throws ServletException {
