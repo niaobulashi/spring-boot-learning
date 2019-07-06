@@ -42,6 +42,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
         public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
             log.info("preHandle");
             start = System.currentTimeMillis();
+            log.info("this is Interceptor,url :" + httpServletRequest.getRequestURI());
             return true;
         }
 
