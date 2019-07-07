@@ -1,0 +1,7 @@
+server:
+  port: 8081
+#指定配置文件为test
+spring:
+  profiles:
+    active: test
+
