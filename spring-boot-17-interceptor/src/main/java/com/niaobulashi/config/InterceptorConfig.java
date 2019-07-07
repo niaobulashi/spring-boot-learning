@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @program: spring-boot-learning
  * @description: 配置拦截器
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-07-06 16:36
  */
 @Slf4j

@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @program: niaobulashi
  * @description: 系统用户
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-06-28 21:19
  */
 @Service("sysUserService")

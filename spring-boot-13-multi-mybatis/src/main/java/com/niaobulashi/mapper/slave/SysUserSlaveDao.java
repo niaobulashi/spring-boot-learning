@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @program: niaobulashi
  * @description: 系统用户
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-07-01 19:01
  */
 public interface SysUserSlaveDao {

@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * @program: niaobulashi
  * @description: 系统用户
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-06-26 21:19
  */
 @Data

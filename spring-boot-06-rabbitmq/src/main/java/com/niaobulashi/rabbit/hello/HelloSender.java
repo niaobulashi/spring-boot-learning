@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * @program: spring-boot-learning
  * @description: hello发送端
- * @author: hulang
+ * @author: https://niaobulashi.com
  * @create: 2019-05-09 16:22
  **/
 @Component

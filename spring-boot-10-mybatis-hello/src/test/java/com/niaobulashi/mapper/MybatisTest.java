@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @program: mybatis_01_hello
  * @description: 测试类
- * @author: hulang  hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-06-26 16:44
  */
 @RunWith(SpringRunner.class)

@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * @program: spring-boot-learning
  * @description: 用户信息表
- * @author: hulang  hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-07-01 17:20
  */
 @Data

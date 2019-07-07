@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @program: spring-boot-learning
  * @description: 队列配置
- * @author: hulang
+ * @author: https://niaobulashi.com
  * @create: 2019-05-09 16:20
  **/
 @Configuration

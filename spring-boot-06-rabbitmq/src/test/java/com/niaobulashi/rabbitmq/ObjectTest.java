@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @program: spring-boot-learning
  * @description: 对象内容的消息队列
- * @author: hulang
+ * @author: https://niaobulashi.com
  * @create: 2019-05-09 17:20
  **/
 @RunWith(SpringRunner.class)

@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @program: spring-boot-learning
  * @description: hello测试类
- * @author: hulang
+ * @author: https://niaobulashi.com
  * @create: 2019-05-09 16:25
  **/
 @RunWith(SpringRunner.class)

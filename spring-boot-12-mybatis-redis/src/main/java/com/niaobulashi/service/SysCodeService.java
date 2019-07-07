@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @program: spring-boot-learning
  * @description: 数字字典
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-06-30 10:18
  */
 public interface SysCodeService {

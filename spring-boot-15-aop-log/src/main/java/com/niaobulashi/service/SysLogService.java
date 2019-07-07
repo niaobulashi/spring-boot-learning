@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 /**
  * @program: spring-boot-learning
  * @description: 系统日志
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-07-03 23:53
  */
 @Slf4j

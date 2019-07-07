@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @program: niaobulashi
  * @description: 系统配置信息
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-06-26 21:19
  */
 public interface SysUserService {

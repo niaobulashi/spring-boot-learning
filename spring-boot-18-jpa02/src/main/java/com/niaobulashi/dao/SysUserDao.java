@@ -12,7 +12,7 @@ import java.util.Optional;
 /**
  * @program: spring-boot-learning
  * @description:
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-07-07 02:06
  */
 public interface SysUserDao extends JpaRepository<SysUser, Integer> {

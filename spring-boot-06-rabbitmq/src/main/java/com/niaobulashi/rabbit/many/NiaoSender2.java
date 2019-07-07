@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @program: spring-boot-learning
  * @description: 多对多发送端
- * @author: hulang
+ * @author: https://niaobulashi.com
  * @create: 2019-05-09 16:37
  **/
 @Component

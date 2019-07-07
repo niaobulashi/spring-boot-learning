@@ -11,7 +11,7 @@ import java.io.Serializable;
 /**
  * @program: spring-boot-learning
  * @description:
- * @author: hulang    hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-07-07 12:38
  */
 @Entity

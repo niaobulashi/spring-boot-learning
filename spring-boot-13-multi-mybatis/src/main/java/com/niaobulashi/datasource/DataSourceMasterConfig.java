@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 /**
  * @program: spring-boot-learning
  * @description: 主数据配置
- * @author: hulang  hulang6666@qq.com
+ * @author: https://niaobulashi.com
  * @create: 2019-07-01 12:32
  */
 @Configuration

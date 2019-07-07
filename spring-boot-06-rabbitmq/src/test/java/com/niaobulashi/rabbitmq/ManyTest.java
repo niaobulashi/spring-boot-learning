@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @program: spring-boot-learning
  * @description: 多对多队列
- * @author: hulang
+ * @author: https://niaobulashi.com
  * @create: 2019-05-09 16:50
  **/
 @RunWith(SpringRunner.class)

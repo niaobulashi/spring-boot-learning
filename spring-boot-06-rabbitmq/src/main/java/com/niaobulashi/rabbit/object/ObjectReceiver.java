@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 /**
  * @program: spring-boot-learning
  * @description: object接收端
- * @author: hulang
+ * @author: https://niaobulashi.com
  * @create: 2019-05-09 17:18
  **/
 @Component
