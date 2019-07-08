@@ -11,7 +11,7 @@
     <groupId>com.niaobulashi</groupId>
     <artifactId>spring-boot-18-jpa02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jpa</name>
+    <name>spring-boot-18-jpa02</name>
     <description>Spring Boot整合使用Jpa</description>
 
     <properties>
