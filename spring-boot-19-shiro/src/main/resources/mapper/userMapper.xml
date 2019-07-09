@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.niaobulashi.mapper.UserMapper">
+
+    <select id="getPassword" parameterType="String" resultType="String">
+        SELECT password
+        FROM user
+        WHERE username = #{username}
+    </select>
+
+    <!-- 根据loginName 获取角色-->
+    <select id="getRole" resultType="String">
+        select
+            ur.role_id
+        from
+            sys_user_role ur
+        left join sys_user u on u.user_id = ur.user_id
+        where
+            u.login_name = #{loginName}
+    </select>
+
+    <!-- 根据username，查询用户信息 -->
+    <select id="queryUserByUserName" parameterType="String" resultType="com.niaobulashi.entity.SysUser">
+		select
+			u.*
+		from
+			sys_user u
+		where
+			u.user_name = #{loginName}
+	</select>
+</mapper>

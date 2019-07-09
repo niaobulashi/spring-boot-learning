@@ -1,5 +1,7 @@
 package com.niaobulashi.mapper;
 
+import com.niaobulashi.entity.SysUser;
+
 /**
  * @program: spring-boot-learning
  * @description:
@@ -15,9 +17,14 @@ public interface UserMapper {
 
     /**
      * 获得角色权限
-     * @param username 用户名
+     * @param loginName 用户名
      * @return user/admin
      */
-    String getRole(String username);
+    String getRole(String loginName);
+
+    /**
+     * 根据key，查询value
+     */
+    SysUser queryUserByUserName(String loginName);
 }
 

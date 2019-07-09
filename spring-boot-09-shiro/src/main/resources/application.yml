@@ -3,11 +3,11 @@ server:
 
 spring:
     datasource:
-      url: jdbc:mysql://localhost:3306/test1?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+      url: jdbc:mysql://localhost:3306/test_shiro?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
       username: root
       password: root
       #schema: database/import.sql
-      #sql-script-encoding: utf-8
+#      sql-script-encoding: utf-8
       driver-class-name: com.mysql.cj.jdbc.Driver
 
     jpa:
