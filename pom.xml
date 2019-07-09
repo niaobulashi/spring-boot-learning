@@ -24,5 +24,6 @@
         <module>spring-boot-16-filter</module>
         <module>spring-boot-17-interceptor</module>
         <module>spring-boot-18-jpa02</module>
+        <module>spring-boot-19-shiro</module>
     </modules>
 </project>
