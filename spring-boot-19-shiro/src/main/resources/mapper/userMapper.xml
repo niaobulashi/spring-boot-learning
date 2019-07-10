@@ -21,7 +21,7 @@
     </select>
 
     <!-- 根据username，查询用户信息 -->
-    <select id="queryUserByUserName" parameterType="String" resultType="com.niaobulashi.entity.SysUser">
+    <select id="queryUserByLoginName" parameterType="String" resultType="com.niaobulashi.entity.SysUser">
 		select
 			u.*
 		from

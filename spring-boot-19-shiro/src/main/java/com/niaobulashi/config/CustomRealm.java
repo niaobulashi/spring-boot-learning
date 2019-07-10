@@ -44,15 +44,15 @@ public class CustomRealm extends AuthorizingRealm {
         String loginName = (String)token.getPrincipal();
         log.info(token.getCredentials().toString());
         // 通过username从数据库中查询找User对象，
-        SysUser sysUser = userMapper.queryUserByUserName(loginName);
-        log.info("根据username查询结果为：" + sysUser);
+        SysUser sysUser = userMapper.queryUserByLoginName(loginName);
+        log.info("根据loginName查询结果为：" + sysUser);
         if(sysUser == null){
             return null;
         }
         SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(
                 sysUser, //用户名
                 sysUser.getPassword(), //密码
-                ByteSource.Util.bytes(sysUser.getCredentialsSalt()),//salt=username+salt
+                ByteSource.Util.bytes(sysUser.getCredentialsSalt()),//salt=loginName+salt
                 getName()  //realm name
         );
         return authenticationInfo;

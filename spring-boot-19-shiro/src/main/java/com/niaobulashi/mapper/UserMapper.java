@@ -25,6 +25,6 @@ public interface UserMapper {
     /**
      * 根据key，查询value
      */
-    SysUser queryUserByUserName(String loginName);
+    SysUser queryUserByLoginName(String loginName);
 }
 
