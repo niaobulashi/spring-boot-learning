@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.niaobulashi.dao.SysUserDao">
+
+    <resultMap id="sysUserInfoMap" type="com.niaobulashi.model.SysUser">
+        <!-- 用户Id属性来映射主键字段 userId-->
+        <id property="id" column="userId"/>
+        <!-- 用result属性来映射非主键字段，property为实体类属性名，column为数据表中的属性-->
+        <result property="userNameStr" column="username"/>
+    </resultMap>
+
+    <!--用户Vo-->
+    <sql id="selectSysUserVo">
+        SELECT
+            u.user_id,
+            u.username,
+            u.password,
+            u.salt,
+            u.email,
+            u.mobile,
+            u.status,
+            u.dept_id,
+            u.create_time,
+            u.amt
+        FROM
+            sys_user u
+    </sql>
+
+    <!--用户表-->
+    <resultMap type="com.niaobulashi.model.SysUser" id="UserResult">
+        <id property="userId" column="user_id"/>
+        <result property="userNameStr" column="username"/>
+        <result property="password" column="login_name"/>
+        <result property="salt" column="password"/>
+        <result property="email" column="email"/>
+        <result property="mobile" column="mobile"/>
+        <result property="status" column="status"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="amt" column="amt"/>
+        <association property="dept" column="dept_id" javaType="com.niaobulashi.model.SysDept" resultMap="DeptResult"/>
+        <collection property="roles" javaType="java.util.List" resultMap="RoleResult"/>
+    </resultMap>
+
+    <!--部门表-->
+    <resultMap id="DeptResult" type="com.niaobulashi.model.SysDept">
+        <id property="deptId" column="dept_id"/>
+        <result property="deptName" column="dept_name"/>
+    </resultMap>
+
+    <!--角色表-->
+    <resultMap id="RoleResult" type="com.niaobulashi.model.SysRole">
+        <id property="roleId" column="role_id"/>
+        <result property="roleName" column="role_name"/>
+    </resultMap>
+
+    <!-- 查询用户信息列表1 -->
+    <select id="queryUserList1" resultType="com.niaobulashi.model.SysUser">
+       SELECT
+            u.user_id,
+            u.username userNameStr,
+            u.password,
+            u.salt,
+            u.email,
+            u.mobile,
+            u.status,
+            u.dept_id,
+            u.create_time,
+            u.amt
+        FROM
+            sys_user u
+        where 1=1
+    </select>
+
+    <!-- 查询用户信息列表2 -->
+    <select id="queryUserList2" resultMap="sysUserInfoMap">
+        <include refid="selectSysUserVo"/>
+        where 1=1
+    </select>
+
+    <!-- 查询用户信息列表2 -->
+    <select id="queryUserListByName" parameterType="String" resultMap="sysUserInfoMap">
+        <include refid="selectSysUserVo"/>
+        where 1=1
+        and u.username like CONCAT('%',#{userName},'%')
+    </select>
+
+    <!--使用用户名和邮箱查询用户信息-->
+    <select id="queryUserByNameAndEmail" resultMap="sysUserInfoMap">
+        <include refid="selectSysUserVo"/>
+        <where>
+            1=1
+            <if test="userName != null and userName != ''">
+                AND u.username like concat('%',#{userName},'%')
+            </if>
+            <if test="email != null and email != ''">
+                AND u.email like concat('%',#{email},'%')
+            </if>
+        </where>
+    </select>
+
+    <!--使用用户名和邮箱查询用户信息2-->
+    <select id="queryUserByUser" parameterType="com.niaobulashi.model.SysUser" resultMap="sysUserInfoMap">
+        <include refid="selectSysUserVo"/>
+        <where>
+            1=1
+            <if test="userNameStr != null and userNameStr != ''">
+                AND u.username like concat('%', #{userNameStr}, '%')
+            </if>
+            <if test="email != null and email != ''">
+                AND u.email like concat('%', #{email}, '%')
+            </if>
+            <if test="mobile != null and mobile != ''">
+                AND u.mobile like concat('%', #{mobile}, '%')
+            </if>
+            <if test="createDateStart != null and createDateStart != ''">/*开始时间检索*/
+                AND date_format(u.create_time, '%y%m%d') <![CDATA[ >= ]]> date_format(#{createDateStart}, '%y%m%d')
+            </if>
+            <if test="createDateEnd != null and createDateEnd != ''">/*结束时间检索*/
+                AND date_format(u.create_time, '%y%m%d') <![CDATA[ <= ]]> date_format(#{createDateEnd}, '%y%m%d')
+            </if>
+            <if test="amtFrom != null and amtFrom != ''">/*起始金额*/
+                AND u.amt <![CDATA[ >= ]]> #{amtFrom}
+            </if>
+            <if test="amtTo != null and amtTo != ''">/*截至金额*/
+                AND u.amt <![CDATA[ <= ]]> #{amtTo}
+            </if>
+        </where>
+    </select>
+
+    <!--查看用户部门和角色信息-->
+    <select id="queryUserRoleDept" parameterType="com.niaobulashi.model.SysUser" resultMap="UserResult">
+        select u.user_id, u.username, u.dept_id, d.dept_name, r.role_id, r.role_name
+        from sys_user u
+        LEFT JOIN sys_dept d on d.dept_id = u.dept_id
+        LEFT JOIN sys_user_role ur on ur.user_id = u.user_id
+        LEFT JOIN sys_role r on r.role_id = ur.role_id
+        WHERE 1=1
+        <if test="userId != null and userId != ''">
+            AND u.user_id = #{userId}
+        </if>
+    </select>
+
+</mapper>

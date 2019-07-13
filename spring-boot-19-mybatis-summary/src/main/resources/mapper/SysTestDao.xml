@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.niaobulashi.dao.SysTestDao">
+
+    <!-- 获取自动生成的(主)键值 -->
+    <insert id="insertSysTest" parameterType="com.niaobulashi.model.SysTest"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into sys_test(
+        <if test="name != null and name != ''">name,</if>
+        <if test="age != null and age != ''">age,</if>
+        <if test="nickName != null and nickName != ''">nick_name,</if>
+        create_time
+        )values(
+        <if test="name != null and name != ''">#{name},</if>
+        <if test="age != null and age != ''">#{age},</if>
+        <if test="nickName != null and nickName != ''">#{nickName},</if>
+        sysdate()
+        )
+    </insert>
+
+    <!-- 批量删除 -->
+    <delete id="deleteSysTestByIds" parameterType="String">
+        delete from sys_test where id in
+        <foreach collection="array" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
