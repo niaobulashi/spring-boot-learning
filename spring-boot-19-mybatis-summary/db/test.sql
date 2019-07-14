@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50635
 File Encoding         : 65001
 
-Date: 2019-07-13 14:39:15
+Date: 2019-07-14 11:32:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -92,6 +92,7 @@ CREATE TABLE `sys_user` (
   `dept_id` bigint(11) DEFAULT NULL COMMENT '部门ID',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `amt` decimal(11,2) DEFAULT NULL COMMENT '金额',
+  `update_date` date DEFAULT NULL COMMENT 'update_date',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `username` (`username`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='系统用户';
@@ -99,11 +100,11 @@ CREATE TABLE `sys_user` (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES ('1', 'admin', 'e1153123d7d180ceeb820d577ff119876678732a68eef4e6ffc0b1f06a01f91b', 'YzcmCZNvbXocrsz9dm8e', 'hulang6666@qq.com', '13612345678', '1', '100', '2016-11-11 11:11:11', '25.96');
-INSERT INTO `sys_user` VALUES ('2', 'test', 'f3fedccee4fd2770e2a35d7083b57605bad4227869639e74b94643cdc3192b36', 'FgfYUWOmCliH581UtjLm', 'test@HH.test.com', '13300000000', '1', '103', '2019-06-05 15:54:26', '123.54');
-INSERT INTO `sys_user` VALUES ('3', 'guest', '1600965621d16d33f9386703d6485061eb8f30f38c70051f04e74831ff2933a7', 'd9v2BTrBXvHrU4kNPt1V', 'test@HH.qq.com', '13166666666', '1', '105', '2019-06-14 11:23:20', '19.09');
-INSERT INTO `sys_user` VALUES ('4', 'one', 'w123131231', '23143123412', 'q23123', '12312321321', '1', '106', '2019-06-27 23:42:13', '35.99');
-INSERT INTO `sys_user` VALUES ('5', 'two', '23131', '2313123', '32131231', '321312321', '1', '106', '2019-06-27 23:42:25', '2.64');
+INSERT INTO `sys_user` VALUES ('1', 'admin', 'e1153123d7d180ceeb820d577ff119876678732a68eef4e6ffc0b1f06a01f91b', 'YzcmCZNvbXocrsz9dm8e', 'hulang6666@qq.com', '13612345678', '1', '100', '2016-11-11 11:11:11', '25.96', '2019-07-05');
+INSERT INTO `sys_user` VALUES ('2', 'test', 'f3fedccee4fd2770e2a35d7083b57605bad4227869639e74b94643cdc3192b36', 'FgfYUWOmCliH581UtjLm', 'test@HH.test.com', '13300000000', '1', '103', '2019-06-05 15:54:26', '123.54', '2019-07-06');
+INSERT INTO `sys_user` VALUES ('3', 'guest', '1600965621d16d33f9386703d6485061eb8f30f38c70051f04e74831ff2933a7', 'd9v2BTrBXvHrU4kNPt1V', 'test@HH.qq.com', '13166666666', '1', '105', '2019-06-14 11:23:20', '19.09', '2019-07-07');
+INSERT INTO `sys_user` VALUES ('4', 'one', 'w123131231', '23143123412', 'q23123', '12312321321', '1', '106', '2019-06-27 23:42:13', '35.99', '2019-07-16');
+INSERT INTO `sys_user` VALUES ('5', 'two', '23131', '2313123', '32131231', '321312321', '1', '106', '2019-06-27 23:42:25', '2.64', '2019-07-14');
 
 -- ----------------------------
 -- Table structure for `sys_user_role`
