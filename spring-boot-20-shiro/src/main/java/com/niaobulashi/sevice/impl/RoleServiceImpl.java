@@ -22,7 +22,7 @@ public class RoleServiceImpl implements RoleService {
     private RoleMapper roleMapper;
 
     /**
-     * 根据userId查询
+     * 根据userId查询角色信息
      * @param id
      * @return
      */

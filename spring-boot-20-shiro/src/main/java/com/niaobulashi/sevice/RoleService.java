@@ -13,7 +13,7 @@ import java.util.List;
 public interface RoleService {
 
     /**
-     *
+     * 根据userId查询角色信息
      * @param id
      * @return
      */

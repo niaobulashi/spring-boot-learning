@@ -35,7 +35,7 @@ public class AuthRealm extends AuthorizingRealm {
     private PermissionService permissionService;
 
     /**
-     * 权限认证
+     * 授权
      * @param principalCollection
      * @return
      */
@@ -61,7 +61,7 @@ public class AuthRealm extends AuthorizingRealm {
     }
 
     /**
-     * 用户认证
+     * 认证
      * @param authToken
      * @return
      * @throws AuthenticationException

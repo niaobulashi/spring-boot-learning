@@ -13,7 +13,7 @@ import java.util.List;
 public interface PermissionService {
 
     /**
-     *
+     * 根据角色id查询权限
      * @param roleIds
      * @return
      */
