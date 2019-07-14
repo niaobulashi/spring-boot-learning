@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(value = "com.niaobulashi.mapper")
+@MapperScan("com.niaobulashi.mapper")
 public class ShiroApplication {
 
     public static void main(String[] args) {

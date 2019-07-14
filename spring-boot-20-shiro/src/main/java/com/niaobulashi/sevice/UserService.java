@@ -1,19 +1,19 @@
-package com.niaobulashi.mapper;
+package com.niaobulashi.sevice;
 
 import com.niaobulashi.model.User;
-import org.apache.ibatis.annotations.Param;
 
 /**
  * @program: spring-boot-20-shiro
  * @description: 用户
  * @author: 鸟不拉屎 https://niaobulashi.com
- * @create: 2019-07-14 11:47
+ * @create: 2019-07-14 11:49
  */
-public interface UserMapper {
+public interface UserService {
+
     /**
      * 根据账户查询用户信息
      * @param account
      * @return
      */
-    User findByAccount(@Param("account") String account);
+    User findByAccount(String account);
 }

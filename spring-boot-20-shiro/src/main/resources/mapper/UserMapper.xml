@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.niaobulashi.mapper.UserMapper">
+    <!--用户表结果集-->
+    <sql id="base_column_list">
+        id, account, password, username
+    </sql>
+
+    <!--根据账户查询用户信息-->
+    <select id="findByAccount" parameterType="Map" resultType="com.niaobulashi.model.User">
+        select
+        <include refid="base_column_list"/>
+        from user
+        where account = #{account}
+    </select>
+</mapper>

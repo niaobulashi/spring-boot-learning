@@ -1,19 +1,24 @@
+# 服务器端口
 server:
   port: 8081
-#指定配置文件为test
-spring:
-  profiles:
-    active: test
 
-#配置Mybatis
+# 配置Spring相关信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: root
+
+# 配置Mybatis
 mybatis:
-  type-aliases-package: com.niaobulashi.entity
+  type-aliases-package: com.niaobulashi.model
   mapper-locations: classpath:mapper/*.xml
   configuration:
-    # 开启驼峰命名转换，如：Table(create_time) -> Entity(createTime)。不需要我们关心怎么进行字段匹配，mybatis会自动识别`大写字母与下划线`
+    # 开启驼峰命名转换
     map-underscore-to-camel-case: true
 
-#打印SQL日志
+# 打印SQL日志
 logging:
   level:
-    com.niaobulashi.dao: DEBUG
+    com.niaobulashi.mapper: DEBUG
