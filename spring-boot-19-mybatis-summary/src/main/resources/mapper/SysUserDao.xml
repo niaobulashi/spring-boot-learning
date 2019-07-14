@@ -126,6 +126,12 @@
             <if test="amtTo != null and amtTo != ''">/*截至金额*/
                 AND u.amt <![CDATA[ <= ]]> #{amtTo}
             </if>
+            <if test="updateDateStart != null and updateDateStart != ''">/*开始时间检索*/
+                AND date_format(u.update_date, '%y%m%d') <![CDATA[ >= ]]> date_format(#{updateDateStart}, '%y%m%d')
+            </if>
+            <if test="updateDateEnd != null and updateDateEnd != ''">/*结束时间检索*/
+                AND date_format(u.update_date, '%y%m%d') <![CDATA[ <= ]]> date_format(#{updateDateEnd}, '%y%m%d')
+            </if>
         </where>
     </select>
 

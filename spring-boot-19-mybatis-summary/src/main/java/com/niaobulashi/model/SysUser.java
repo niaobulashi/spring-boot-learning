@@ -44,6 +44,9 @@ public class SysUser implements Serializable {
 	/** 金额 */
 	private BigDecimal amt;
 
+	/** 修改日期 */
+	private Date updateDate;
+
 	/****************关联部分**************
 	/** 部门 */
 	private SysDept dept;
@@ -62,6 +65,12 @@ public class SysUser implements Serializable {
 
 	/** 截至金额 */
 	private BigDecimal amtTo;
+
+	/** 修改时间开始 */
+	private String updateDateStart;
+
+	/** 修改时间结束 */
+	private String updateDateEnd;
 
 	public Long getUserId() {
 		return userId;
@@ -189,5 +198,29 @@ public class SysUser implements Serializable {
 
 	public void setAmtTo(BigDecimal amtTo) {
 		this.amtTo = amtTo;
+	}
+
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
+	}
+
+	public String getUpdateDateStart() {
+		return updateDateStart;
+	}
+
+	public void setUpdateDateStart(String updateDateStart) {
+		this.updateDateStart = updateDateStart;
+	}
+
+	public String getUpdateDateEnd() {
+		return updateDateEnd;
+	}
+
+	public void setUpdateDateEnd(String updateDateEnd) {
+		this.updateDateEnd = updateDateEnd;
 	}
 }
