@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div style="border-radius:5px;font-size:19px;width:680px;font-family:微软雅黑,'Helvetica Neue',Arial,sans-serif;margin:10px auto 0px;border:1px solid #eee;max-width:100%;">
+    <div style="width:100%;background:#49BDAD;color:#FFFFFF;border-radius:5px 5px 0 0;">
+        <p style="font-size:22px;word-break:break-all;padding:20px 32px;margin:0;"><span th:text="${siteTitle}"></span>《<a style="color:#FFFFFF;font-weight:bold;text-decoration:none;" target="_blank" th:href="${permalink}"><span th:text="${title}"></span></a>》一文有新的评论啦！</p>
+    </div>
+    <div style="margin:0px auto;width:90%">
+        <p><span th:text="${author}"/> 于 <span th:text="${time}"/></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;在《<span th:text="${title}"/>》评论说：</p>
+        <p style="background:#EFEFEF;margin:15px 0px;padding:20px;border-radius:5px;font-size:20px;color:#333;"><span th:text="${text}"/></p>
+        <p>IP：<span th:text="${ip}"/>，邮箱：<span th:text="${mail}"/>，审核：<span th:text="${status}"/>。</p>
+        <p>可登录<a th:href="${manage}" target='_blank'>网站后台</a>管理评论。</p>
+    </div>
+</div>
+
+</body>
+</html>

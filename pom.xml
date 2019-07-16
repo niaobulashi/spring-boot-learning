@@ -26,5 +26,6 @@
         <module>spring-boot-18-jpa02</module>
         <module>spring-boot-19-mybatis-summary</module>
         <module>spring-boot-20-shiro</module>
+        <module>spring-boot-21-schedule-mail</module>
     </modules>
 </project>
