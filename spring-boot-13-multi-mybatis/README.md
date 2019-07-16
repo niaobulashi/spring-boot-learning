@@ -1,4 +1,4 @@
-# Spring Boot2(四)：使用Spring Boot多数据源实现读写分离
+# Spring Boot2(四)：整合Mybatis多数据源实现过程
 
 文章地址：https://niaobulashi.com/archives/mybatis-mutls.html
 

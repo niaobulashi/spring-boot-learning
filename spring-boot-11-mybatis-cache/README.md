@@ -1,4 +1,4 @@
-# Spring Boot2 集成 Mybatis 缓存实例
+# Spring Boot2(二)：使用Spring Boot2集成Mybatis缓存机制
 
 文章地址：https://niaobulashi.com/archives/mybatis-2levelcache.html
 

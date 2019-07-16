@@ -1,4 +1,4 @@
-# Spring Boot2 集成 Mybatis之 mybatis_01_hello
+# Spring Boot2(一)：使用Spring Boot2集成Mybatis基础搭建
 
 文章地址：https://niaobulashi.com/archives/spring-boot-mybatis-hello.html
 
