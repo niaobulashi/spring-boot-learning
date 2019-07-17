@@ -46,7 +46,7 @@ public class SchedulerTask {
         // 将字段加载到页面模板中
         String emailContent = templateEngine.process("sendMail", context);
         // 添加附件
-        String filePath="E:\\workspace\\javaWorkspace\\spring-boot-learning\\spring-boot-21-schedule-mail\\doc\\test.log";
+        String filePath="E:\\workspace\\javaWorkspace\\spring-boot-learning\\spring-boot-21-scheduler-mail\\doc\\test.log";
         mailService.sendHtmlMail("hulang6666@qq.com","主题：这是模板邮件",emailContent, filePath);
     }
 }

@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.niaobulashi</groupId>
-    <artifactId>spring-boot-21-schedule-mail</artifactId>
+    <artifactId>spring-boot-21-scheduler-mail</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-21-schedule-mail</name>
+    <name>spring-boot-21-scheduler-mail</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
