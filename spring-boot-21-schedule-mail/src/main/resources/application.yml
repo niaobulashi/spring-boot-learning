@@ -1,12 +1,12 @@
 spring:
   mail:
-    #ÓÊÏä·şÎñÆ÷µØÖ·
+    #é‚®ç®±æœåŠ¡å™¨åœ°å€
     host: smtp.qq.com
     username: hulang6666@qq.com
-    password: swotmgwsftrmjegb
+    password: *************
     default-encoding: UTF-8
 
 mail:
-  #ÒÔË­À´·¢ËÍÓÊ¼ş
+  #ä»¥è°æ¥å‘é€é‚®ä»¶
   fromMail:
     addr: hulang6666@qq.com
