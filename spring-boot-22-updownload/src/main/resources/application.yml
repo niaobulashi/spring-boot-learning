@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  servlet:
+    multipart:
+      # \u9ED8\u8BA4\u652F\u6301\u6587\u4EF6\u4E0A\u4F20
+      enabled: true
+      # \u6700\u5927\u652F\u6301\u6587\u4EF6\u5927\u5C0F
+      max-file-size: 50MB
+      # \u6700\u5927\u652F\u6301\u8BF7\u6C42\u5927\u5C0F
+      max-request-size: 100MB
+      # \u6587\u4EF6\u652F\u6301\u5199\u5165\u78C1\u76D8
+      file-size-threshold: 0
+      # \u4E0A\u4F20\u6587\u4EF6\u7684\u4E34\u65F6\u76EE\u5F55
+      location: /test

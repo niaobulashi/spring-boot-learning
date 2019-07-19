@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.niaobulashi</groupId>
-    <artifactId>spring-boot-21-scheduler-mail</artifactId>
+    <artifactId>spring-boot-22-updownload</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-21-scheduler-mail</name>
-    <description>Demo project for Spring Boot</description>
+    <name>spring-boot-22-updownload</name>
+    <description>上传下载文件，多文件扩展</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,17 +32,29 @@
             <scope>test</scope>
         </dependency>
 
-        <!--mail邮件-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
-        </dependency>
-
         <!--thymeleaf前端模板-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.22</version>
+        </dependency>
+
     </dependencies>
 
     <build>

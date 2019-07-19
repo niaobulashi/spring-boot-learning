@@ -27,5 +27,6 @@
         <module>spring-boot-19-mybatis-summary</module>
         <module>spring-boot-20-shiro</module>
         <module>spring-boot-21-scheduler-mail</module>
+        <module>spring-boot-22-updownload</module>
     </modules>
 </project>
