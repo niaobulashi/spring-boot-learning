@@ -1,15 +1,55 @@
 server:
   port: 8081
+  tomcat:
+    max-swallow-size: 1MB
 spring:
   servlet:
     multipart:
-      # \u9ED8\u8BA4\u652F\u6301\u6587\u4EF6\u4E0A\u4F20
+      # 默认支持文件上传
       enabled: true
-      # \u6700\u5927\u652F\u6301\u6587\u4EF6\u5927\u5C0F
+      # 最大支持文件大小
       max-file-size: 50MB
-      # \u6700\u5927\u652F\u6301\u8BF7\u6C42\u5927\u5C0F
+      # 最大支持请求大小
       max-request-size: 100MB
-      # \u6587\u4EF6\u652F\u6301\u5199\u5165\u78C1\u76D8
+      # 文件支持写入磁盘
       file-size-threshold: 0
-      # \u4E0A\u4F20\u6587\u4EF6\u7684\u4E34\u65F6\u76EE\u5F55
+      # 上传文件的临时目录
       location: /test
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: root
+  jpa:
+    # 数据库类型
+    database: mysql
+    #打印SQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update  #第一次启动创建表，之后修改为update
+  thymeleaf:
+    # 是否启用
+    enabled: true
+    # 模板编码
+    encoding: UTF-8
+    # 模板模式
+    mode: HTML5
+    # 模板存放路径
+    prefix: classpath:/templates/
+    # 模板后缀
+    suffix: .html
+    # 启用缓存，建议生产开启
+    cache: false
+    # 校验模板是否存在
+    check-template-location: true
+    # Content-type值
+    servlet:
+      content-type: text/html
+    # 加配置静态资源
+    resources:
+      static-locations: classpath:/
+
+niaobulashi:
+  file:
+    path: D:\workspace\javaProject\spring-boot-learning\spring-boot-22-updownload\doc
+    extension: .gif,.jpeg,.png,.jpg,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,.txt,.rar,.tif

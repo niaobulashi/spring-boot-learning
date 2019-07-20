@@ -47,6 +47,8 @@
 
 [**spring-boot-20-shiro**](https://github.com/niaobulashi/spring-boot-learning/tree/master/spring-boot-20-shiro)：Spring Boot2(十二)：手摸手教你搭建Shiro安全框架
 
+[**spring-boot-21-scheduler-mail**](https://github.com/niaobulashi/spring-boot-learning/tree/master/spring-boot-21-scheduler-mail)：Spring Boot2(十三)：整合定时任务发送邮件
+
 第一时间发布到个人博客和个人公众号上
 
 一个正在努力Coding的未来架构师
