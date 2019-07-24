@@ -1,0 +1,27 @@
+# 服务器端口
+server:
+  port: 8081
+
+# 配置Spring相关信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: root
+
+  thymeleaf:
+    cache: false
+
+# 配置Mybatis
+mybatis:
+  type-aliases-package: com.niaobulashi.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 开启驼峰命名转换
+    map-underscore-to-camel-case: true
+
+# 打印SQL日志
+logging:
+  level:
+    com.niaobulashi.mapper: DEBUG
