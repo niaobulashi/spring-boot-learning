@@ -12,6 +12,8 @@ import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +29,8 @@ import static org.apache.shiro.util.ThreadContext.getSubject;
 @Controller
 public class LoginController {
 
+    private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
+
     @GetMapping("/login")
     public String login() {
         return "login";
@@ -34,13 +38,17 @@ public class LoginController {
 
     /**
      * 登录操作
-     * @param user
+     * @param account
+     * @param password
+     * @param rememberMe
      * @return
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ResponseCode login(@RequestBody User user) {
+    @ResponseBody
+    public ResponseCode login(String account, String password, Boolean rememberMe) {
+        logger.info("登录请求-start");
         Subject userSubject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken(user.getAccount(), user.getPassword());
+        UsernamePasswordToken token = new UsernamePasswordToken(account, password);
         try {
             // 登录验证
             userSubject.login(token);
@@ -59,18 +67,21 @@ public class LoginController {
 
 
     @GetMapping("/auth")
+    @ResponseBody
     public String auth() {
         return "已成功登录";
     }
 
     @GetMapping("/role")
     @RequiresRoles("vip")
+    @ResponseBody
     public String role() {
         return "测试Vip角色";
     }
 
     @GetMapping("/permission")
     @RequiresPermissions(value = {"add", "update"}, logical = Logical.AND)
+    @ResponseBody
     public String permission() {
         return "测试Add和Update权限";
     }

@@ -24,15 +24,19 @@ public class ShiroConfig {
 		shiroFilterFactoryBean.setSecurityManager(securityManager);
 		// 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面
 		shiroFilterFactoryBean.setLoginUrl("/login");
-		shiroFilterFactoryBean.setSuccessUrl("/");
+		shiroFilterFactoryBean.setSuccessUrl("/index");
 		// 拦截器
-		Map<String, String> map = new LinkedHashMap<>();
+		LinkedHashMap<String, String> map = new LinkedHashMap<>();
 		// 配置不会被拦截的链接 顺序判断
-		map.put("/login", "anon");
+		// 对静态资源设置匿名访问
+		map.put("/static/**", "anon");
+		map.put("/css/**", "anon");
+		map.put("/js/**", "anon");
+
 		// 过滤链定义，从上向下顺序执行，一般将/**放在最为下边
 		// 进行身份认证后才能访问
 		// authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问
-		map.put("/**", "authc");
+		 map.put("/**", "authc");
 		shiroFilterFactoryBean.setFilterChainDefinitionMap(map);
 		return shiroFilterFactoryBean;
 	}
