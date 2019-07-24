@@ -12,6 +12,7 @@ import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.apache.shiro.subject.Subject;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import static org.apache.shiro.util.ThreadContext.getSubject;
@@ -23,8 +24,13 @@ import static org.apache.shiro.util.ThreadContext.getSubject;
  * @author: 鸟不拉屎 https://niaobulashi.com
  * @create: 2019-07-14 11:51
  */
-@RestController
+@Controller
 public class LoginController {
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
 
     /**
      * 登录操作
@@ -51,11 +57,6 @@ public class LoginController {
         }
     }
 
-
-    @GetMapping("/login")
-    public ResponseCode login() {
-        return ResponseCode.error(StatusEnums.NOT_LOGIN_IN);
-    }
 
     @GetMapping("/auth")
     public String auth() {

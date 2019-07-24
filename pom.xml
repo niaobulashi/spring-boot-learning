@@ -28,5 +28,7 @@
         <module>spring-boot-20-shiro</module>
         <module>spring-boot-21-scheduler-mail</module>
         <module>spring-boot-22-updownload</module>
+        <module>spring-boot-23-shiro-remember</module>
+        <module>spring-boot-24-springsecurity</module>
     </modules>
 </project>
