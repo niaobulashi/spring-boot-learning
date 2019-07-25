@@ -11,7 +11,7 @@ import lombok.Setter;
  */
 public enum StatusEnums {
 
-    SUCCESS(200, "操作成功"),
+    SUCCESS(100, "操作成功"),
     SYSTEM_ERROR(500, "系统错误"),
     ACCOUNT_UNKNOWN(500, "账户不存在"),
     ACCOUNT_IS_DISABLED(13, "账号被禁用"),
@@ -20,6 +20,7 @@ public enum StatusEnums {
     PARAM_REPEAT(400, "参数已存在"),
     PERMISSION_ERROR(403, "没有操作权限"),
     NOT_LOGIN_IN(15, "账号未登录"),
+    AUTH_ERROR(16, "认证失败"),
     OTHER(-100, "其他错误");
 
     @Getter

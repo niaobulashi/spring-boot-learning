@@ -62,17 +62,21 @@ public class AuthRealm extends AuthorizingRealm {
 
     /**
      * 认证
-     * @param authToken
+     * @param token
      * @return
      * @throws AuthenticationException
      */
     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authToken) throws AuthenticationException {
-        UsernamePasswordToken token = (UsernamePasswordToken) authToken;
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+        String userName = (String) token.getPrincipal();
+        String password = new String((char[]) token.getCredentials());
         // 根据用户名查询用户信息
-        User user = userService.findByAccount(token.getUsername());
+        User user = userService.findByAccount(userName);
         if (user == null) {
             return null;
+        }
+        if (!password.equals(user.getPassword())) {
+            throw new IncorrectCredentialsException("用户名或密码错误！");
         }
         return new SimpleAuthenticationInfo(user, user.getPassword(), getName());
     }

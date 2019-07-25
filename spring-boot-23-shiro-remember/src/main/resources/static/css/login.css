@@ -26,7 +26,7 @@
 .form button {
     text-transform: uppercase;
     outline: 0;
-    background: #4caf50;
+    background: #1199c4;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -39,7 +39,7 @@
 .form button:hover,
 .form button:active,
 .form button:focus {
-    background: #43a047;
+    background: #1199c4;
 }
 .form .message {
     margin: 15px 0 0;
@@ -47,7 +47,7 @@
     font-size: 12px;
 }
 .form .message a {
-    color: #4caf50;
+    color: #1199c4;
     text-decoration: none;
 }
 .form .register-form {
@@ -97,10 +97,10 @@
     color: #ef3b3a;
 }
 body {
-    background: #76b852; /* fallback for old browsers */
-    background: -webkit-linear-gradient(right, #76b852, #8dc26f);
-    background: -moz-linear-gradient(right, #76b852, #8dc26f);
-    background: -o-linear-gradient(right, #76b852, #8dc26f);
-    background: linear-gradient(to left, #76b852, #8dc26f);
+    background: #1199c4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #1199c4, #8dc26f);
+    background: -moz-linear-gradient(right, #1199c4, #8dc26f);
+    background: -o-linear-gradient(right, #1199c4, #8dc26f);
+    background: linear-gradient(to left, #1199c4, #8dc26f);
     font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif;
 }

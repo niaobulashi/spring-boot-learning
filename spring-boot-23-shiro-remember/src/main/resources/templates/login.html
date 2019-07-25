@@ -21,21 +21,23 @@
     function login() {
         var account = $("input[name='account']").val();
         var password = $("input[name='password']").val();
-        var rememberMe =$("input[name='rememberMe']").is(':checked');
+        var rememberMe = $("input[name='rememberMe']").is(':checked');
         $.ajax({
             type: "post",
             url: ctx + "login",
-            data: {"account": account,"password": password,"rememberMe": rememberMe},
-            dataType: "json",
-            contentType: "application/json; charset=utf-8",
-            success: function (r) {
-                if (r.code == 0) {
+            data: {
+                "account": account,
+                "password": password,
+                "rememberMe": rememberMe
+            },
+            success: function(r) {
+                if (r.code == 100) {
                     location.href = ctx + 'index';
                 } else {
-                    alert(r.msg);
+                    alert(r.message);
                 }
             }
         });
-    };
+    }
 </script>
 </html>
