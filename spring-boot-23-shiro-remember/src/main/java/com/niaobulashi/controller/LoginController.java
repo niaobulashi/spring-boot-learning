@@ -1,5 +1,6 @@
 package com.niaobulashi.controller;
 
+import com.google.code.kaptcha.Constants;
 import com.niaobulashi.common.dto.ResponseCode;
 import com.niaobulashi.common.enums.StatusEnums;
 import com.niaobulashi.common.util.MD5Utils;
@@ -9,12 +10,15 @@ import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.authz.annotation.RequiresRoles;
+import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Objects;
 
 import static org.apache.shiro.util.ThreadContext.getSubject;
 
@@ -44,8 +48,22 @@ public class LoginController {
      */
     @PostMapping("/login")
     @ResponseBody
-    public ResponseCode login(String account, String password, Boolean rememberMe) {
+    public ResponseCode login(String account, String password, Boolean rememberMe, String validateCode) {
         logger.info("登录请求-start");
+        //1、检验验证码
+        if(validateCode == null || validateCode == ""){
+            return ResponseCode.error(StatusEnums.PARAM_NULL);
+        }
+        Session session = SecurityUtils.getSubject().getSession();
+        //转化成小写字母
+        validateCode = validateCode.toLowerCase();
+        String v = (String) session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
+        //还可以读取一次后把验证码清空，这样每次登录都必须获取验证码
+        //session.removeAttribute("_come");
+        if(!validateCode.equals(v)){
+            return ResponseCode.error(StatusEnums.VALIDATECODE_ERROR);
+        }
+
         password = MD5Utils.encrypt(account, password);
         Subject userSubject = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(account, password, rememberMe);

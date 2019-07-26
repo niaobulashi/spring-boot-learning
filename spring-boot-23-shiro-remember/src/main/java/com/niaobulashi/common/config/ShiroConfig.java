@@ -35,7 +35,7 @@ public class ShiroConfig {
 		map.put("/static/**", "anon");
 		map.put("/css/**", "anon");
 		map.put("/js/**", "anon");
-
+		map.put("/captcha/captchaImage**", "anon");
 		// 过滤链定义，从上向下顺序执行，一般将/**放在最为下边
 		// 进行身份认证后才能访问
 		// authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问

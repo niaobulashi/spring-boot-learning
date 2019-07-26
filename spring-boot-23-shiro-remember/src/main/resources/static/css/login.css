@@ -62,6 +62,11 @@
     width: auto;
     margin-right: 10px;
 }
+.form .validateCode {
+    float:left;
+    width: 150px;
+    height: 35px;
+}
 .container {
     position: relative;
     z-index: 1;

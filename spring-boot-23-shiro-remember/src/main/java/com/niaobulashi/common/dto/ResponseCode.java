@@ -62,4 +62,5 @@ public class ResponseCode<T> implements Serializable {
     public static ResponseCode error(StatusEnums statusEnums) {
         return new ResponseCode(statusEnums);
     }
+
 }
