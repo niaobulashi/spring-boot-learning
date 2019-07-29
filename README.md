@@ -49,6 +49,10 @@
 
 [**spring-boot-21-scheduler-mail**](https://github.com/niaobulashi/spring-boot-learning/tree/master/spring-boot-21-scheduler-mail)：Spring Boot2(十三)：整合定时任务发送邮件
 
+[**spring-boot-22-updownload**](https://github.com/niaobulashi/spring-boot-learning/tree/master/spring-boot-22-updownload)：Spring Boot2(十四)：单文件上传/下载，文件批量上传
+
+[**spring-boot-23-shiro-remember**](https://github.com/niaobulashi/spring-boot-learning/tree/master/spring-boot-23-shiro-remember)：Spring Boot2(十五)：Shiro记住我rememberMe、验证码Kaptcha
+
 第一时间发布到个人博客和个人公众号上
 
 一个正在努力Coding的未来架构师
